@@ -10,17 +10,28 @@ public class BankAccount {
     }
     
     public String toString() {
-        return accountID + "/t" + balance;
+        return accountID + "\t" + balance;
     }
+    
     public double getBalance() {
         return balance;
     }
+    
     public int getAccountID () {
         return accountID;
     }
-    public setPassword (String newPass) {
+    
+    public void setPassword (String newPass) {
         password = newPass;
     }
+    
+    //to test setPassword
+    /*
+    public String getPassword () {
+        return password;
+    }
+    */
+    
     public boolean deposit(double amount) {
         if (amount > 0) {
             balance = balance + amount;
@@ -28,6 +39,7 @@ public class BankAccount {
         }
         return false;
     }
+    
     public boolean withdraw(double amount) {
         if (amount < balance) {
             balance = balance - amount;
@@ -38,5 +50,3 @@ public class BankAccount {
     
 }
 
-
-/*Return a String to be used to display the account data. "ACCOUNT\tBALANCE" */
